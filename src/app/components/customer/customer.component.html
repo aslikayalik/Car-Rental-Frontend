@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li [class]="getAllCustomerClass" routerLink="/cars">All Customers</li>
+  <li (click)="setCurrentCustomer(customer)" routerLink="/cars/customer/{{customer.CustomerId}}"
+   *ngFor="let customer of customers" [class]="getCurrentCustomerClass(customer)">{{customer.User.FirstName}}</li>
+</ul>
+
+<h5 *ngIf="currentCustomer">You chosed {{currentCustomer.User.FirstName}} <h5>
+
