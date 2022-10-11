@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
-// api ye istekde bulunmak için app- mdoule de bu import un bulunması gerekiyor.
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 
@@ -27,7 +26,7 @@ import { CartSummaryComponent } from './components/cartSummary/cart-summary.comp
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
-  declarations: [	// kendi component lerimizi buraya koyuyoruz.
+  declarations: [	
     AppComponent,
       MyComponentComponent,
       BrandComponent,
@@ -44,11 +43,11 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
       LoginComponent
      
    ],
-  imports: [ // dışardan, bizim yazamadığımız compnentleri buraya koyuyoruz.
+  imports: [ 
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserModule, FormsModule,  // Benim uygulamama forms ile ilgili çalışmaların desteğini bırak demek.
+    BrowserModule, FormsModule, 
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({positionClass:"toast-bottom-right"})
@@ -56,5 +55,5 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
   ],
   bootstrap: [AppComponent]
-}) // HTTP_INTERCEPTORS ı bütün http isteklerimize enjekte ettik ve orda çalışacak inceptor da AuthInterceptor.
+}) 
 export class AppModule { }

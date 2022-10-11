@@ -36,7 +36,7 @@ if(brand == this.currentBrand){
 
 }
 
-getAllBrandClass(){  //// burda hata veriyo
+getAllBrandClass(){ 
   if(this.currentBrand){
     return "list-group-item active"
   }else{
