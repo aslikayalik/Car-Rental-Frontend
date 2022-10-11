@@ -15,15 +15,14 @@ const routes: Routes = [
   {path:"", pathMatch:"full", component:CarComponent},
   {path:"cars", component:CarComponent},
   {path:"cars/brand/:BrandId",component:CarComponent},
-// meseal bir numralı bran i isitorsam  o BrandId ye karşılık gelicek.
-{path:"cars/add",component:CarAddComponent, canActivate:[LoginGuard]}, // LoginGuard ı devreye soktuk.
+{path:"cars/add",component:CarAddComponent, canActivate:[LoginGuard]},
 {path:"login",component:LoginComponent},
 {path:"cars/color/:ColorId",component:CarComponent},
 {path:"user",component:UserComponent},
 {path:"customer",component:CustomerComponent},
 {path:"rental",component:RentalComponent},
 
-]; // böyle bi şey olursa bunu çalıştır.
+]; 
 
 
 
