@@ -13,7 +13,7 @@ import { ResponseModel } from '../models/responseModel';
 export class CarService {
 
 
-  apiUrl = "http://localhost:57750/api/Cars/getall"; 
+  apiUrl = "http://localhost:4200/api/Cars/getall"; 
 
 constructor(private httpClient:HttpClient) { }
 getCars():Observable<ListResponseModel<Car>>{

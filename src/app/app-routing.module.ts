@@ -8,6 +8,8 @@ import { LoginGuard } from './guards/login.guard';
 import { UserComponent } from './components/user/user.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 
@@ -18,9 +20,11 @@ const routes: Routes = [
 {path:"cars/add",component:CarAddComponent, canActivate:[LoginGuard]},
 {path:"login",component:LoginComponent},
 {path:"cars/color/:ColorId",component:CarComponent},
-{path:"user",component:UserComponent},
-{path:"customer",component:CustomerComponent},
-{path:"rental",component:RentalComponent},
+{path:"brands",component:BrandComponent},
+{path:"colors",component:ColorComponent},
+{path:"users",component:UserComponent},
+{path:"customers",component:CustomerComponent},
+{path:"rentals",component:RentalComponent},
 
 ]; 
 
@@ -33,3 +37,5 @@ const routes: Routes = [
   ], exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

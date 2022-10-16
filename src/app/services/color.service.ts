@@ -11,7 +11,7 @@ import { ListResponseModel } from '../models/listResponseModel';
 })
 export class ColorService {
 
-  apiUrl = "http://localhost:57750/api/Colors/getall"; 
+  apiUrl = "http://localhost:4200/api/Colors/getall"; 
 
 constructor(private httpClient:HttpClient) { }
 
