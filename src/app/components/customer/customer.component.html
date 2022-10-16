@@ -1,6 +1,6 @@
 <ul class="list-group">
   <li [class]="getAllCustomerClass" routerLink="/customers">All Customers</li>
-  <li (click)="setCurrentCustomer(customer)" routerLink="/customers/customer/{{customer.CustomerId}}"
+  <li (click)="setCurrentCustomer(customer)" routerLink="/customers/{{customer.CustomerId}}"
    *ngFor="let customer of customers" [class]="getCurrentCustomerClass(customer)">{{customer.User.FirstName}}</li>
 </ul>
 
