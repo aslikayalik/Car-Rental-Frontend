@@ -23,10 +23,14 @@ const routes: Routes = [
 {path:"brands",component:BrandComponent},
 {path:"colors",component:ColorComponent},
 {path:"users",component:UserComponent},
+{path:"users/:Id",component:UserComponent},
 {path:"customers",component:CustomerComponent},
+{path:"customers/:CustomerId",component:CustomerComponent},
 {path:"rentals",component:RentalComponent},
+{path:"rentals/:RentalId",component:RentalComponent},
 
 ]; 
+
 
 
 
