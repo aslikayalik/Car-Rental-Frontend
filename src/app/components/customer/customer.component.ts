@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from 'src/app/models/Customer';
 import { CustomerService } from 'src/app/services/customer.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-customer',
@@ -13,7 +14,7 @@ export class CustomerComponent implements OnInit {
   currentCustomer : Customer;
 
 
-  constructor(private customerService:CustomerService) { }
+  constructor(private customerService:CustomerService,private httpClient:HttpClient) { }
 
   ngOnInit(): void{
     this.getCustomers();

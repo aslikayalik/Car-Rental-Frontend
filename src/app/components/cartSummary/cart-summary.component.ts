@@ -3,6 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Car } from 'src/app/models/Car';
 import { CartItem } from 'src/app/models/cartItem';
 import { CartService } from 'src/app/services/cart.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-cart-summary',
@@ -11,7 +12,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartSummaryComponent implements OnInit {
 cartItems:CartItem[]=[];
-  constructor( private cartService:CartService, private toastrService:ToastrService) { }
+  constructor( private cartService:CartService, private toastrService:ToastrService, private httpClient:HttpClient) { }
 
   ngOnInit() {
     this.getCart();

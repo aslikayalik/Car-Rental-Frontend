@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Color } from 'src/app/models/Color';
 import { ColorService } from 'src/app/services/color.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-color',
@@ -15,7 +16,7 @@ export class ColorComponent implements OnInit {
 
 
 
-  constructor(private colorService:ColorService) { }
+  constructor(private colorService:ColorService,private httpClient:HttpClient) { }
 
   ngOnInit(): void{
     this.getColors();

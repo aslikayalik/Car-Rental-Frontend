@@ -1,5 +1,6 @@
+
 <ul class="list-group">
-  <li [class]="getAllRentalClass" routerLink="/rentals">All rentals</li>
+  <li [class]="getAllRentalClass()" routerLink="/rentals">All rentals</li>
   <li (click)="setCurrentRental(rental)" routerLink="/rentals/{{rental.RentalId}}"
    *ngFor="let rental of rentals" [class]="getCurrentRentalClass(rental)">{{rental.RentalId}}</li>
 </ul>

@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Car } from 'src/app/models/Car';
 import { CarService } from 'src/app/services/car.service';
 import { CartService } from 'src/app/services/cart.service';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -13,14 +14,11 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CarComponent implements OnInit {
 
-
- 
   cars:Car[]= []; 
  dataLoaded = false;
  filterText="";
 
-constructor(private carService : CarService, private activatedRoute:ActivatedRoute, private toastrService:ToastrService,
-  private cartService:CartService) {}  
+constructor(private carService : CarService, private activatedRoute:ActivatedRoute, private toastrService:ToastrService, private cartService:CartService , private httpClient:HttpClient) {}  
 
   ngOnInit(): void {
 
