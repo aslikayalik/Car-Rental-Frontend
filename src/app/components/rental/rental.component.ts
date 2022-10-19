@@ -6,7 +6,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-rental',
   templateUrl: './rental.component.html',
-  styleUrls: ['./rental.component.css']
+  styleUrls: ['./rental.component.css'],
+  providers:[RentalService]
 })
 export class RentalComponent implements OnInit {
 

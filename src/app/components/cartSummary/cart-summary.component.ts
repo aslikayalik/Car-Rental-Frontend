@@ -8,7 +8,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-cart-summary',
   templateUrl: './cart-summary.component.html',
-  styleUrls: ['./cart-summary.component.css']
+  styleUrls: ['./cart-summary.component.css'],
+  providers:[CartService]
 })
 export class CartSummaryComponent implements OnInit {
 cartItems:CartItem[]=[];

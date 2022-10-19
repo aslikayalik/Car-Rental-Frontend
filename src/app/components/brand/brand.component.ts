@@ -6,7 +6,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-brand',
   templateUrl: './brand.component.html',
-  styleUrls: ['./brand.component.css']
+  styleUrls: ['./brand.component.css'],
+  providers:[BrandService]
 })
 export class BrandComponent implements OnInit {
 

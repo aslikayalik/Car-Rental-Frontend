@@ -6,7 +6,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css']
+  styleUrls: ['./color.component.css'],
+  providers:[ColorService]
 })
 export class ColorComponent implements OnInit {
 

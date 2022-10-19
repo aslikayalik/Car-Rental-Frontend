@@ -7,7 +7,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-carAdd',
   templateUrl: './carAdd.component.html',
-  styleUrls: ['./carAdd.component.css']
+  styleUrls: ['./carAdd.component.css'],
+  providers:[CarService]
 })
 export class CarAddComponent implements OnInit {
 carAddForm : FormGroup;

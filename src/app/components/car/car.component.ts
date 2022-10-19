@@ -10,7 +10,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-car',
   templateUrl: './car.component.html',
-  styleUrls: ['./car.component.css']
+  styleUrls: ['./car.component.css'],
+  providers:[CarService]
 })
 export class CarComponent implements OnInit {
 
